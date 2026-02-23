@@ -11,7 +11,7 @@ const cancelBtn = document.getElementById('cancel-btn')
 const submitBtn = document.getElementById('submit-btn')
 const deviceId = getOrCreateDeviceId()
 
-const MAX_NOTES = 20;
+const MAX_NOTES = 100;
 let notesCount = 0;
 
 export function initModal() {
@@ -33,8 +33,8 @@ async function handleSubmit() {
   const author = document.getElementById('author-name').value
   const isAnonymous = document.getElementById('anonymous-checkbox').checked
   const imageFile = document.getElementById('post-image').files[0]
-  const deviceId = getOrCreateDeviceId()
-  // const deviceId = crypto.randomUUID()
+  // const deviceId = getOrCreateDeviceId()
+  const deviceId = crypto.randomUUID()
   const count = await countPostsByTopic(getCurrentTopicId());
 
   if (!content.trim()) {
