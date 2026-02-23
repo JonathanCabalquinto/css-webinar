@@ -4,4 +4,23 @@
   color: white;
   padding: 20px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+}
+
+.logo {
+  height: 158px;
+  width: auto;
+  object-fit: contain;
+  position: absolute;
+  left: 20px;
 }
